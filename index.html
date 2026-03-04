@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="logo.png" type="image/x-icon" rel="icon"    />
+
+<title>مزيكة رايقة</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>🎵 مزيكة رايقة 🎵</header>
+
+<input type="text" id="search" placeholder="اكتب اسم الأغنية...">
+
+<div class="container" id="songs">
+
+    <!-- أغنية 1 -->
+    <abbr title="استمتع بالأغنية ✨">
+        <div class="song">
+            <h3>اغنيه</h3>
+
+            <audio controls>
+                <source src="song1.mp3" type="audio/mpeg">
+            </audio>
+
+            <a href="song1.mp3" download="اغنية1.mp3">
+                <button>تحميل</button>
+            
+            
+            </a>
+
+<h4>بواسطة : عمر دياب</h4>
+
+        </div>
+    </abbr>
+
+    <!-- أغنية 2 -->
+    <abbr title="استمتع بالأغنية ✨">
+        <div class="song">
+            <h3>أغنية</h3>
+
+            <audio controls>
+                <source src="song2.mp3" type="audio/mpeg">
+            </audio>
+
+            <a href="song2.mp3" download="اغنية-حب.mp3">
+                <button>تحميل</button>
+            </a>
+        </div>
+    </abbr>
+
+</div>
+
+<script>
+const searchInput = document.getElementById("search");
+const songs = document.querySelectorAll(".song");
+
+searchInput.addEventListener("keyup", function(){
+    let value = this.value.toLowerCase();
+
+    songs.forEach(song => {
+        let title = song.querySelector("h3").textContent.toLowerCase();
+
+        if(title.includes(value)){
+            song.parentElement.style.display = "block";
+        } else {
+            song.parentElement.style.display = "none";
+        }
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+body{
+    margin:0;
+    font-family:Arial;
+    background: linear-gradient(135deg,#141e30,#243b55);
+    color:white;
+    text-align:center;
+}
+
+header{
+    padding:25px;
+    font-size:30px;
+    font-weight:bold;
+}
+
+#search{
+    width:70%;
+    padding:12px;
+    border-radius:10px;
+    border:none;
+    font-size:16px;
+    margin-bottom:20px;
+    outline:none;
+}
+
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    padding:20px;
+}
+
+abbr{
+    text-decoration:none; /* يشيل الخط تحت abbr */
+}
+
+.song{
+    background:rgba(255,255,255,0.1);
+    padding:15px;
+    border-radius:15px;
+    width:250px;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.song:hover{
+    transform:scale(1.05);
+    background:rgba(255,255,255,0.2);
+}
+
+.song h3{
+    margin:10px 0;
+}
+
+audio{
+    width:100%;
+    margin:10px 0;
+}
+
+button{
+    padding:8px 15px;
+    background:#00c6ff;
+    border:none;
+    border-radius:8px;
+    color:white;
+    cursor:pointer;
+    font-size:14px;
+}
+
+button:hover{
+    background:#0094cc;
+}
